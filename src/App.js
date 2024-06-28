@@ -8,9 +8,9 @@ import About from "./pages/About/About.jsx";
 
 function App() {
   return (
-    <Router basename="/Portfolio">
+    <Router>
       <Routes>
-        <Route path="/" element={<Start />} />
+        <Route path="*" element={<Start />} />
         <Route path="/experiences" element={<Experiences />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/home" element={<Home />} />
