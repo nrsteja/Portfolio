@@ -8,7 +8,7 @@ import About from "./pages/About/About.jsx";
 
 function App() {
   return (
-    <Router>
+    <Router basename="/Portfolio">
       <Routes>
         <Route path="/" element={<Start />} />
         <Route path="/experiences" element={<Experiences />} />
