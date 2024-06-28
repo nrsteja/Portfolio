@@ -1,0 +1,21 @@
+.about-main {
+    background-image: url("./../../assets/images/about-space.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh; /* Ensure it covers the full viewport height */
+    justify-content: center; /* Center the content vertically */
+    align-items: center; /* Center the content horizontally */
+  }
+  
+  .button-container {
+    left: 6%;
+  }
+  
+  .about-back-button {
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+    filter: drop-shadow(0 0 0.75rem rgb(19, 212, 241));
+  }
+  

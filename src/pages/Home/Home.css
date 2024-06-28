@@ -1,0 +1,104 @@
+.home-main {
+    background-image: url("./../../assets/images/astronaut-space.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh; /* Full height of the viewport */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Ensures the header is at the top and the back button is at the bottom */
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+  
+.earth-container {
+    position: absolute;
+    left: 48.5%; /* Center horizontally */
+    top: 51%;  /* Center vertically */
+    transform: translate(-50%, -50%); /* Center the container */
+    width: 23vw; /* Use viewport width for responsiveness */
+    height: 24vw; /* Make height equal to width for a circle */
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.earth-overlay {
+    width: 100%; /* Full width of the container */
+    height: 100%; /* Full height of the container */
+    background: transparent; /* Default color */
+    border-radius: 50%; /* Make it a circle */
+    transition: background 0.3s, box-shadow 0.3s; /* Add transition for box-shadow */
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
+    /* border: 2px solid red; */
+}
+
+.earth-container:hover .earth-overlay {
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.8); /* Add white shadow on hover */
+}
+  
+.home-sun, .home-saturn {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    transition: transform 0.3s ease-in-out; /* Smooth transition for pop-up effect */
+}
+
+.planet-label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 5px 10px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    opacity: 0;
+    transition: opacity 0.3s, transform 0.3s;
+    pointer-events: none; /* Prevent label from blocking clicks */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    /* text-transform: uppercase; */
+    font-family: 'Arial', sans-serif; /* Change the font family for a more modern look */
+}
+.earth-planet {
+    background: #1da1f2;
+}
+.sun-planet {
+    background: #fb4b00;
+}
+.saturn-planet {
+    background: #8e05f6;
+}
+
+.earth-container:hover .planet-label,
+.home-sun:hover .planet-label,
+.home-saturn:hover .planet-label {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.1); /* Slightly enlarge the label on hover */
+}
+
+.home-sun:hover, .home-saturn:hover {
+    transform: scale(1.2); /* Scale up the icon to 120% of its original size */
+}
+  
+.home-sun {
+    top: 100px;
+    right: 10%;
+}
+  
+.home-saturn {
+    bottom: 100px;
+    left: 10%;
+}
+
+
+  
+  
+  /* .earth-container:hover .earth-overlay {
+    background: rgba(39, 37, 37, 0.8); 
+    filter: drop-shadow(0 0 50px rgba(46, 43, 43, 0.8));
+
+  } */
+  

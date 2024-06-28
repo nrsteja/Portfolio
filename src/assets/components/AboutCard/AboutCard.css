@@ -1,0 +1,261 @@
+/* Common styles for about card */
+.about-main-card {
+  width: 80%;
+  height: auto;
+  margin: auto;
+  padding: 35px;
+  background: radial-gradient(circle, #1bdae4 0%, rgba(255, 255, 255, 0) 71.88%), #fff7b1;
+  box-shadow: 0px 2px 2px rgba(245, 239, 239, 1), 0px 8px 5px rgba(227, 220, 220, 1), 0px 3px 39px white, 0px 10px 21px white, 0px 0px 0px rgba(19, 212, 241, 1);
+  border-radius: 23px;
+  transition: all 0.8s cubic-bezier(0.15, 0.83, 0.66, 1);
+  z-index: 1;
+  position: relative;
+  overflow: hidden;
+  display: flex; /* Added to ensure the width is respected */
+  flex-direction: column; /* Added to ensure the content flows correctly */
+  margin-bottom: 4vh;
+}
+
+.about-main-card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-close-button {
+  background: none;
+  border: none;
+  color: #4c9beb;
+  font-size: 24px;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.about-close-button:hover {
+  color: red;
+  transform: scale(1.2);
+}
+
+.skills-container, .awards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5vh;
+  margin: 20px 0px;
+  width: 100%; /* Ensure it takes full width */
+}
+
+.skill-card, .award-card {
+  background: #fff;
+  border-radius: 15px;
+  padding: 8px 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.skill-card:hover, .award-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(234, 67, 67, 0.2);
+}
+
+.skill-icon, .award-icon {
+  margin-right: 10px;
+  font-size: 24px;
+}
+
+.skill-name, .award-name {
+  font-weight: bold;
+  text-align: center;
+  
+}
+
+.award-card {
+  width: 20vh;
+  height: 50vh;
+  border-radius: 4px;
+  background: #212121;
+  display: flex;
+  gap: 5px;
+  padding: .6em;
+}
+
+.award-name {
+  height: 100%;
+  width: 100%;
+  flex: 1;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: all .5s;
+  background: #212121;
+  border: 1px solid #ff5a91;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ff5a91;
+  text-transform: uppercase;
+  margin: 0px;
+}
+
+.award-name span {
+  transform: rotate(-90deg);
+  transition: transform 0.5s;
+}
+
+.award-card:hover .award-name span {
+  transform: rotate(0);
+  font-size: 2.5vh;
+}
+
+.award-description {
+  display: none;
+  font-size: 2vh;
+  color: #ff568e;
+  margin-top: 10px;
+  text-align: center;
+  padding: 10px;
+  border: 1px solid #ff5a91;
+  margin-bottom: 0px;
+}
+
+.award-card:hover .award-description {
+  display: block;
+  height: 60%;
+}
+
+.award-card:hover .award-name {
+  height: 40%;
+}
+
+.award-card:hover {
+  transform: scale(1.2);
+}
+
+.about-me-container {
+  width: 100%;
+  text-align: center;
+  margin: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.about-me-image {
+  background-image: url("./../../images/photo.jpeg");
+  width: 250px;
+  height: 250px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: auto 0px;
+  box-shadow: 0px 8px 8px #09f4f8;
+}
+
+.about-me-para {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+}
+
+.about-me-name {
+  font-size: 28px;
+  color: #ff5a91;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: bold;
+  box-shadow: 0 4px 8px #ff5a91;
+  padding: 2%;
+  margin: 0px;
+  margin-bottom: 3%;
+}
+.about-me-links {
+  font-size: 28px;
+  color: #ff5a91;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: bold;
+  box-shadow: 0 4px 8px #ff5a91;
+  margin: 0px;
+}
+
+.about-me-description {
+  font-size: 18px;
+  color: #06337b;
+  box-shadow: 0 4px 8px #06337b;
+  padding: 4%;
+}
+
+.icon {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.icon:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.icon:hover {
+  animation: rotate 0.5s linear infinite;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  grid-auto-rows: minmax(100px, auto);
+  gap: 20px;
+  padding: 20px;
+}
+
+.skills-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.skills-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.skills-card img {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 10px;
+}
+
+.skills-card h4 {
+  margin: 10px 0 5px;
+}
+
+.skills-card p {
+  color: #666;
+  text-align: center;
+  margin: 0;
+}
+
+.about-me-contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: auto;
+}

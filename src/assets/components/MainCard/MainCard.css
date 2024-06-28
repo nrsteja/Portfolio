@@ -1,0 +1,220 @@
+.main-card {
+  width: 80%;
+  max-width: 1200px; /* Maximum width for large screens */
+  height: auto; /* Let height adjust based on content */
+  margin: auto;
+  padding: 1rem; /* Adjust padding */
+  background: radial-gradient(178.94% 106.41% at 26.42% 106.41%, rgb(27, 218, 228)  0%, rgba(255, 255, 255, 0) 71.88%) , #FFF7B1; 
+  box-shadow: 0px 2px 2px rgb(245, 239, 239), 0px 8px 5px rgb(227, 220, 220), 0px 3px 39px white, 0px 10px 21px white, 0px 0px 0px rgb(19, 212, 241);
+  border-radius: 23px;
+  transition: all 0.8s cubic-bezier(0.15, 0.83, 0.66, 1);
+  cursor: pointer;
+  z-index: 1;
+  margin-bottom: 4vh;
+}
+
+.main-card:hover {
+  transform: scale(1.025);
+}
+
+.main-card-container {
+  width: 250px;
+  height: 250px;
+  position: absolute;
+  right: -35px;
+  top: -60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0.7);
+}
+
+
+/* .cloud {
+  width: 250px;
+} */
+
+.main-card-front {
+  padding-top: 45px;
+  margin-left: 25px;
+  display: inline;
+  position: absolute;
+  z-index: 11;
+  animation: clouds 8s infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.main-card-back {
+  margin-top: -30px;
+  margin-left: 150px;
+  z-index: 12;
+  animation: clouds 12s infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.right-front {
+  width: 45px;
+  height: 45px;
+  border-radius: 50% 50% 50% 0%;
+  background-color: #4c9beb;
+  display: inline-block;
+  margin-left: -25px;
+  z-index: 5;
+}
+
+.left-front {
+  width: 65px;
+  height: 65px;
+  border-radius: 50% 50% 0% 50%;
+  background-color: #4c9beb;
+  display: inline-block;
+  z-index: 5;
+  margin-left: -115px;
+}
+
+.right-back {
+  width: 50px;
+  height: 50px;
+  border-radius: 50% 50% 50% 0%;
+  background-color: #4c9beb;
+  display: inline-block;
+  margin-left: -20px;
+  z-index: 5;
+}
+
+.left-back {
+  width: 30px;
+  height: 30px;
+  border-radius: 50% 50% 0% 50%;
+  background-color: #4c9beb;
+  display: inline-block;
+  margin-left: -40px;
+  z-index: 5;
+}
+
+.sun {
+  width: 120px;
+  height: 120px;
+  background: -webkit-linear-gradient(to right, #fcbb04, #fffc00);
+  background: linear-gradient(to right, #fcbb04, #fffc00);
+  border-radius: 60px;
+  display: inline;
+  position: absolute;
+}
+
+.sunshine {
+  animation: sunshines 2s infinite;
+}
+
+@keyframes sunshines {
+  0% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+
+  100% {
+    transform: scale(1.4);
+    opacity: 0;
+  }
+}
+
+@keyframes clouds {
+  0% {
+    transform: translateX(15px);
+  }
+
+  50% {
+    transform: translateX(0px);
+  }
+
+  100% {
+    transform: translateX(15px);
+  }
+}
+
+.main-card-header, .main-card-exp-header {
+  position: relative;
+  display: grid;
+  justify-items: center;
+  align-self: center;
+  gap: 2rem; /* Adjust gap for spacing between cards */
+  grid-template-columns: repeat(3,1fr);
+}
+
+/* Medium screens - adjust grid layout */
+@media (max-width: 1200px) {
+  .main-card-header {
+      grid-template-columns: repeat(2, 3fr);
+  }
+  
+}
+@media (max-width: 1800px) {
+  .main-card-exp-header {
+    grid-template-columns: repeat(2,2fr);
+  }
+}
+
+/* Small screens - adjust grid layout */
+@media (max-width: 768px) {
+  .main-card-header, .main-card-exp-header {
+      grid-template-columns: 2fr;
+  }
+}
+
+.main-card-back-button {
+  margin-left: 100px;
+}
+
+
+.main-card-header span:first-child {
+  word-break: break-all;
+  font-weight: 800;
+  font-size: 15px;
+  line-height: 135%;
+  color: rgba(87, 77, 51, 0.66);
+}
+
+
+.main-card-header span:last-child {
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 135%;
+  color: rgba(87, 77, 51, 0.33);
+}
+
+.temp {
+  position: absolute;
+  left: 25px;
+  bottom: 12px;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 77px;
+  color: rgba(87, 77, 51, 1);
+}
+
+.temp-scale {
+  width: 80px;
+  height: 36px;
+  position: absolute;
+  right: 25px;
+  bottom: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.06);
+  border-radius: 9px;
+}
+
+.temp-scale span {
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 134.49%;
+  color: rgba(87, 77, 51, 0.66);
+}
+
+.back-button {
+  position: absolute;
+  bottom: 10px; /* Adjust as needed */
+  left: 10px; /* Adjust as needed */
+  /* Add other styles for the back button */
+}

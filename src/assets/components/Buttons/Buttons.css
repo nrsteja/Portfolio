@@ -1,0 +1,147 @@
+.about-button-container{
+  position: absolute;
+  left: 5%;
+  top: 35%;
+}
+.wrapper {
+    display: inline-flex;
+    list-style: none;
+    height: 120px;
+    width: 100%;
+    padding-top: 40px;
+    font-family: "Poppins", sans-serif;
+    justify-content: center;
+    
+  }
+  .about-card-click{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    align-items: center;
+  }
+  
+  .wrapper .about-icon {
+    position: relative;
+    background: transparent;
+    border-radius: 50%;
+    margin: 3vh;
+    width: 15vh;
+    height: 15vh;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  .wrapper .tooltip {
+    position: absolute;
+    top: 0;
+    font-size: 14px;
+    background: #fff;
+    color: #fff;
+    padding: 5px 8px;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  .wrapper .tooltip::before {
+    position: absolute;
+    content: "";
+    height: 8px;
+    width: 8px;
+    background: #fff;
+    bottom: -3px;
+    left: 50%;
+    transform: translate(-50%) rotate(45deg);
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  .wrapper .about-icon:hover .tooltip {
+    top: -45px;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+  
+  .wrapper .about-icon:hover span,
+  .wrapper .about-icon:hover .tooltip {
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+  }
+  
+
+  .wrapper .facebook:hover .tooltip,
+  .wrapper .facebook:hover .tooltip::before {
+    filter: drop-shadow(0 0 2rem #e47140);
+    background: #e47140;
+    color: #fff;
+  }
+  
+
+  .wrapper .twitter:hover .tooltip,
+  .wrapper .twitter:hover .tooltip::before {
+    filter: drop-shadow(0 0 2rem #1da1f2);
+    background: #1da1f2;
+    color: #fff;
+  }
+  
+
+  .wrapper .instagram:hover .tooltip,
+  .wrapper .instagram:hover .tooltip::before {
+    filter: drop-shadow(0 0 2rem #8e05f6);
+    background: #8e05f6;
+    color: #fff;
+  }
+
+  .wrapper .instagram:hover,
+  .wrapper .twitter:hover,
+  .wrapper .facebook:hover {
+    transform: scale(1.2);
+
+  }
+  .wrapper .facebook:hover {
+    filter: drop-shadow(0 0 2rem #fb4b00);
+  }
+  .wrapper .twitter:hover {
+    filter: drop-shadow(0 0 2rem #1da1f2);
+  }
+  .wrapper .instagram:hover {
+    filter: drop-shadow(0 0 2rem #8e05f6);
+  }
+
+  .buttons-header {
+    display: flex;
+    justify-content: center;
+    color: rgb(80, 246, 255);
+    font-family: 'dash horizon';
+    font-size: 20px;
+    margin-bottom: 0px;
+    padding: 0px;
+}
+
+
+  /* .wrapper .icon:hover {
+    transform: scale(1.2);
+  }
+  
+  .wrapper .facebook:hover {
+    box-shadow: 0 10px 20px rgba(228, 113, 64, 0.7);
+  }
+  
+  .wrapper .twitter:hover {
+    box-shadow: 0 10px 20px rgba(29, 161, 242, 0.7);
+  }
+  
+  .wrapper .instagram:hover {
+    box-shadow: 0 10px 20px rgba(142, 5, 246, 0.7);
+  }
+   */
+  
+  
