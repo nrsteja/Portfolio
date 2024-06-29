@@ -22,9 +22,6 @@ export default function About() {
         <div className='about-back-button'>
             <Back onClick={handleNavigate}/>
         </div>
-        <div className="disclaimer-about">
-            <p>Click on the planets to explore my space</p>
-        </div>
     </div>
   )
 }
