@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './DescriptionCard.css';
-import { Close } from '../Icons/Icons';
+import { Close, GitHub, Link } from '../Icons/Icons';
 
 function DescriptionCard({ card, type, onClose }) {
   const [isProject, setIsProject] = useState(type === 'proj');
@@ -21,12 +21,10 @@ function DescriptionCard({ card, type, onClose }) {
     <>
       <div className={`overlay ${isVisible ? 'active' : ''}`} onClick={handleClose}></div>
       <div className={`description-card ${isVisible ? 'active' : ''}`}>
-      <button className="close-button" onClick={handleClose}>
-            <Close />
-          </button>
+        <button className="close-button" onClick={handleClose}>
+          <Close />
+        </button>
         <div className="description-card-inner">
-          
-
           <h2 className="description-card-title">{card.name}</h2>
           <div className='description-card-inner-image'>
             {card.image && (
@@ -41,6 +39,20 @@ function DescriptionCard({ card, type, onClose }) {
               {isProject && (
                 <div className="description-card-role">
                   <h3>{card.topic}</h3>
+                  {isProject && card.repoLink && (
+                    <div className="card-detail-repo">
+                      <a href={card.repoLink} target="_blank" rel="noopener noreferrer" className="repo-link">
+                        <GitHub />
+                      </a>
+                    </div>
+                  )}
+                  {isProject && card.videoLink && (
+                    <div className="card-detail-repo">
+                      <a href={card.videoLink} target="_blank" rel="noopener noreferrer" className="video-link">
+                        <Link />
+                      </a>
+                    </div>
+                  )}
                 </div>
               )}
               <div className="card-detail-project">
@@ -64,6 +76,8 @@ function DescriptionCard({ card, type, onClose }) {
               <div className="card-detail-para">
                 <p className="card-description-details"><strong style={{color: '#550637'}}>Description:</strong> {card.description}</p>
               </div>
+              
+              
               <div className="card-technologies">
                 <h4>Technologies Used</h4>
                 <ul>
@@ -81,6 +95,7 @@ function DescriptionCard({ card, type, onClose }) {
                   )))}
                 </ul>
               </div>
+              
             </div>
           </div>
         </div>

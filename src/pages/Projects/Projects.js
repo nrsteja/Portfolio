@@ -6,6 +6,7 @@ import Card from '../../assets/components/Card/Card.jsx';
 import MainCard from '../../assets/components/MainCard/MainCard.jsx';
 import { ReactNative, OpenAI, Figma, Java, VisualParadigm, OOPS, Python, Remix, LinearRegressions, NeuralNetwork, RandomForest, OpenCV, Numpy, Tailwind, ROS, LiDAR, Linux, GroceryGrabber, HandGesture, PineappleStudios, PremierLeague, HotelBooking } from '../../assets/components/Icons/Icons.jsx';
 import { projectsData } from '../../assets/data/database.jsx';
+
 const Projects = () => {
   const homePageNavigate = '/Home'
   return (
@@ -13,7 +14,9 @@ const Projects = () => {
       <header className='experiences-header'>
         <h1>PROJECTS</h1>
       </header>
-      <MainCard type="proj" card={projectsData} navigation={homePageNavigate} />
+      <div className='projects-main-card'>
+        <MainCard type="proj" card={projectsData} navigation={homePageNavigate} />
+      </div>
     </div>
   );
 };

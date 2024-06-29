@@ -10,6 +10,7 @@
     margin: 0;
     padding: 0;
     position: relative;
+    text-align: center;
 }
   
 .earth-container {
@@ -91,6 +92,18 @@
 .home-saturn {
     bottom: 100px;
     left: 10%;
+}
+.disclaimer {
+    position: absolute;
+    bottom: 5px;
+    width: 100%;
+    text-align: center;
+    font-size: 25px; /* Increase the font size as needed */
+    color: #fff; /* Adjust the color as needed */
+    background-color: transparent; /* Optional: add a semi-transparent background */
+    padding: 10px;
+    border-radius: 5px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 

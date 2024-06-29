@@ -3,7 +3,7 @@
   overflow: visible;
   width: 230px;
   height: 240px;
-  z-index: 1000;
+  z-index: 900;
 }
 
 .content {

@@ -2,6 +2,7 @@ import React from 'react';
 import "./Home.css";
 import { Saturn, Sun } from '../../assets/components/Icons/Icons';
 import { useNavigate } from 'react-router-dom';
+import HelperPrompt from '../../assets/components/HelperPrompt/HelperPrompt';
 
 function Home() {
     const navigate = useNavigate();
@@ -28,6 +29,9 @@ function Home() {
             <div className="home-saturn" onClick={handleSaturnClick}>
                 <Saturn />
                 <div className="planet-label saturn-planet">Experiences</div>
+            </div>
+            <div className="disclaimer">
+                <p>Click on the planets to explore my space</p>
             </div>
         </div>
     );

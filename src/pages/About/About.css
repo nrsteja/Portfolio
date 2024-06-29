@@ -18,4 +18,16 @@
     left: 5%;
     filter: drop-shadow(0 0 0.75rem rgb(19, 212, 241));
   }
+  .disclaimer-about {
+    position: absolute;
+    top: 5px;
+    width: 100%;
+    text-align: center;
+    font-size: 25px; /* Increase the font size as needed */
+    color:white; /* Adjust the color as needed */
+    background-color: transparent; /* Optional: add a semi-transparent background */
+    padding: 10px;
+    border-radius: 5px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
   

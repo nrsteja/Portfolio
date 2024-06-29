@@ -14,7 +14,9 @@ const Experiences = () => {
             <header className='experiences-header'>
                 <h1>EXPERIENCES</h1>
             </header>
-            <MainCard type="exp" card={experiencesData} navigation={homePageNavigate} />
+            <div>
+                <MainCard type="exp" card={experiencesData} navigation={homePageNavigate} />
+            </div>
 
         </div>
     );

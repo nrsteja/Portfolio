@@ -6,7 +6,7 @@
     min-height: 100vh;/* Full height of the viewport */
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Ensures the header is at the top and the back button is at the bottom */
+    justify-content: center; /* Ensures the header is at the top and the back button is at the bottom */
     margin: 0;
     padding: 0;
     padding: 1rem; /* Add padding to prevent content from touching edges */

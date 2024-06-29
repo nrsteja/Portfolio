@@ -1,0 +1,12 @@
+.disclaimer {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+    font-size: 25px; /* Increase the font size as needed */
+    color: #fff; /* Adjust the color as needed */
+    background-color: transparent; /* Optional: add a semi-transparent background */
+    padding: 10px;
+    border-radius: 5px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}

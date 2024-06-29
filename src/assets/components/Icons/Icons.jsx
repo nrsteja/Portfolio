@@ -1,6 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCss3, faHtml5, faReact, faFigma, faJava, faPython, faCreativeCommonsRemix, faLinkedinIn, faGithub, faTelegram, faWhatsapp, faGoogle } from '@fortawesome/free-brands-svg-icons';
+import { faCss3, faHtml5, faReact, faFigma, faJava, faPython, faCreativeCommonsRemix, faLinkedinIn, faGithub, faTelegram, faWhatsapp, faGoogle, faYoutube } from '@fortawesome/free-brands-svg-icons';
 import { faCircleNodes, faCode, faCodeBranch, faMicrochip, faTimes, faHeart, faGear, faTrophy, faUser, faEnvelope, faPhone, faFile } from '@fortawesome/free-solid-svg-icons';
 
 import openai from "./../../images/openai.png"
@@ -340,4 +340,7 @@ export const Resume = () => {
 }
 export const Google = () => {
     return <img src={google}  alt="google" />
+}
+export const Link = () => {
+    return <FontAwesomeIcon style={{height:'30px'}} icon={faYoutube} />
 }

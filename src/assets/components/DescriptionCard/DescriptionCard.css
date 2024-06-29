@@ -32,6 +32,7 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   overflow: hidden;
   animation: fadeIn 0.5s ease-out;
+  z-index: 1000;
 }
 
 /* Other styles remain the same */
@@ -50,7 +51,6 @@
 .description-card-inner {
   background: rgba(255, 255, 255, 0.1);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(15px);
   border-radius: 15px;
   width: 88%;
   max-height: 88%;
@@ -171,13 +171,22 @@
 }
 .description-card-role {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   background: rgba(255, 255, 255, 0.2);
   border-radius: 10px;
   margin-bottom: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: background 0.3s ease;
+  align-items: center;
+  gap: 1rem;
 }
+
+.card-detail-repo {
+  display: flex;
+  align-items: center;
+  margin-top: 12px;
+}
+
 
 .card-detail:hover {
   background: rgba(255, 255, 255, 0.3);
@@ -260,3 +269,26 @@
   color: #06337b;
   transition: color 0.3s ease;
 }
+
+
+.repo-link {
+  color:black;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.repo-link:hover,
+.video-link:hover {
+  color: #1ddae4;
+}
+
+.video-link {
+  color:red;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+

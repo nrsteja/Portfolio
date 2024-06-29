@@ -6,6 +6,7 @@ import { useNavigate } from 'react-router-dom'
 import MainCard from '../../assets/components/MainCard/MainCard.jsx';
 import AboutCard from '../../assets/components/AboutCard/AboutCard.jsx';
 import { experiencesData, projectsData } from '../../assets/data/database.jsx'
+import HelperPrompt from '../../assets/components/HelperPrompt/HelperPrompt.jsx'
 
 export default function About() {
     const navigate = useNavigate();
@@ -21,7 +22,9 @@ export default function About() {
         <div className='about-back-button'>
             <Back onClick={handleNavigate}/>
         </div>
-        
+        <div className="disclaimer-about">
+            <p>Click on the planets to explore my space</p>
+        </div>
     </div>
   )
 }
